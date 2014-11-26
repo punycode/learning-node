@@ -1,11 +1,26 @@
+/*
+ * My little Gruntfile.js – Task runnin' is magic.
+ */
+'use strict';
+
 module.exports = function (grunt) {
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    bowerpkg: grunt.file.readJSON('bower.json'),
+    application: {
+      package: grunt.file.readJSON('package.json'),
+      bower: grunt.file.readJSON('bower.json')
+    },
     connect: {
+      options: {
+        port: 9000,
+        // change this to '0.0.0.0' to access the server from outside
+        hostname: 'localhost'
+      },
       server: {}
     },
     jshint: {
+      options: {
+        node: true
+      },
       files: ['Gruntfile.js', 'app/**/*.js', 'test/**/*.js', '!app/bower_components/**/*.js']
     },
     watch: {
