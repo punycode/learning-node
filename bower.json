@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app/index.html",
   "dependencies": {
+    "platform": "Polymer/platform#~0.4.2"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
